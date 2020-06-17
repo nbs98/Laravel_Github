@@ -28,15 +28,15 @@ class HomeController extends Controller
         return view('about');
     }
     public function getlogin(){
-        return view('user.login');
+        return view('home.user.login');
     }
     public function getRegis(){
-        return view('user.regis');
+        return view('home.user.regis');
     }
     public function getInfo(){
         $id = Auth::user()->id;
         $user = User::find($id);
-        return view('user.info',['user' => $user]);
+        return view('home.user.info',['user' => $user]);
     }
     public function getLogout(){
         Auth::logout();

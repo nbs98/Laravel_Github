@@ -53,7 +53,7 @@
                 </div>
                 <div class="card-img" style="margin-top: 5px;">
                     <div class="row">
-                        <div class="col-4 col-md-5" style="margin-top: 5px;">
+                        <div class="col-4 col-md-5 embed-responsive" style="margin-top: 5px;">
                             <img src="{{asset('backend/uploadTinTuc/'.$tinNoiBat->hinhAnh)}}" class="img-fluid img-thumbnail" alt="Mobirise" title="" media-simple="true">
                         </div>
                         <div class="col-8 col-md-7">

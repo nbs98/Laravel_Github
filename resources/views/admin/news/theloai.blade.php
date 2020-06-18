@@ -20,15 +20,15 @@
         </div>
     @endif
     <div class="row">
-        <div class="col-12" style="">
-            <table class="table table-striped table-bordered table-dark" >
+        <div class="col-12 text-center" style="">
+            <table class="table table-striped table-bordered table-dark" style="">
                 <tr class="text-center">
                     <td colspan="4" class="font-weight-bold"><h3>DANH SÁCH THỂ LOẠI</h3></td>
                 </tr>
                 <tr class="font-weight-bold text-center">
                     <td>#</td>
                     <td>Tên thể loại</td> 
-                    <td>Thao tác</td>
+                    <td style="width: 20%;">Thao tác</td>
                 </tr>
                 <?php
                     $j=1;

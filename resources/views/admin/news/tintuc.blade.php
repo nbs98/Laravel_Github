@@ -25,7 +25,7 @@
                 <tr>
                     <td colspan="6" class="text-center"><h2>DANH SÁCH TIN TỨC </h2></td><td colspan="2"><a href="{{ route('admin.get.themTin') }}"><button class="btn btn-outline-danger">Thêm tin</button></a></td>
                 </tr>
-                <tr>
+                <tr class="text-center">
                     <th>Hình ảnh</th>
                     <th>Tiêu đề</th>
                     <th>Lượt xem</th>
@@ -41,11 +41,11 @@
                         <td scope="row"><img src="{{asset('backend/uploadTinTuc/'.$news->hinhAnh)}}" class="rounded" style="width: 80px;"></td>
                         <td>{{ $news->tieuDe }}</td>
                         <td>{{ $news->soLuotXem }}</td>
-                        <td>{{ $news->tenLoaiTin }}</td>
+                        <td><?php $loaitin = DB::table('loaitin')->where('id',$news->idLoaiTin)->get(); ?> @foreach($loaitin as $lt) {{$lt->tenLoaiTin}}  @endforeach</td>
                         <td>{{ $news->tacGia }}</td>
                         <td>{{ $news->tag }}</td>
                         <td>{{ $news->created_at }}</td>
-                        <td><a href=""><button class="btn btn-outline-primary">Xem thêm</button></a><a href="{{ route('admin.get.xoaTin',$news->id) }}"><button class="btn btn-outline-danger">Xóa</button></a></td>
+                        <td class="text-center"><a href=""><button class="btn btn-outline-primary text-dark bg-primary">Xem thêm</button></a><a href="{{ route('admin.get.xoaTin',$news->id) }}"><button class="btn btn-outline-danger text-light bg-dark">Xóa</button></a></td>
                     </tr>
                 @endforeach
         </table>

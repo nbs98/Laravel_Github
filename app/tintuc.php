@@ -9,7 +9,7 @@ class tintuc extends Model
     protected $table = 'tintuc';
 
     protected $fillable = [
-        'id','idLoaiTin','idTheLoai','tacGia','tieuDe','noiDung','hinhAnh','soLuotXem','tag',
+        'id','idLoaiTin','idTheLoai','tacGia','tieuDe','noiDung','hinhAnh','soLuotXem','tag','created_at',
     ];
 
 }

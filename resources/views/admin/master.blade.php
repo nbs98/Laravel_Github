@@ -28,10 +28,6 @@
     </style>
   </head>
   <body>
-    <nav class="nav justify-content-between bg-danger ">
-      <a class="nav-link active text-warning font-weight-bold" href="{{ route('admin.get.dashBroad') }}">NBS</a>
-    <a class="nav-link text-light font-weight-bold" href="{{ route('home.get.index') }}"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Trang chủ</a>
-    </nav>
         <!-- Bootstrap row -->
         <div class="row" id="body-row">
             <!-- Sidebar -->
@@ -135,6 +131,12 @@
                             <span class="menu-collapsed">Trợ giúp</span>
                         </div>
                     </a>
+                    <a href="{{ route('home.get.index') }}" class="bg-dark list-group-item list-group-item-action">
+                      <div class="d-flex w-100 justify-content-start align-items-center">
+                        <i class="fa fa-undo fa-fw mr-3" aria-hidden="true"></i>
+                          <span class="menu-collapsed">Về trang chủ</span>
+                      </div>
+                  </a>
                     <a href="#top" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
                         <div class="d-flex w-100 justify-content-start align-items-center">
                             <span id="collapse-icon" class="fa fa-2x mr-3"></span>

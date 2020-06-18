@@ -13,6 +13,7 @@ use App\tintuc;
 use App\theloai;
 
 
+
 class HomeController extends Controller
 {
     public function getIndex(){

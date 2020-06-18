@@ -12,7 +12,7 @@ use App\loaitin;
 class NewsController extends Controller
 {
     public function getTinTuc(){
-        $tinTuc = DB::table('tintuc')->join('loaitin', 'tintuc.idLoaiTin', '=', 'loaitin.id')->select('tintuc.*', 'loaitin.tenLoaiTin')->get();
+        $tinTuc = DB::table('tintuc')->get();
         return view('admin.news.tinTuc',['tinTuc'=>$tinTuc]);
     }
     public function getThemTin(){
@@ -53,7 +53,7 @@ class NewsController extends Controller
         if(isset($_POST['btnThemTheLoai'])){
             $tenTheLoai = DB::table('theloai')->pluck('tenTheLoai')->toArray();
             if(in_array($request->txtTenTheLoai,$tenTheLoai)){
-                $request->session()->flash('error', 'Tên thể loại này trong hệ thống.');
+                $request->session()->flash('error', 'Tên thể loại này đã tồn tại trong hệ thống.');
                 return redirect()->back()->withInput();
             }else{
                 $tl = new theloai;
@@ -95,7 +95,14 @@ class NewsController extends Controller
         return redirect()->back()->with('success','Xóa thành công');
     }
     public function xoaTin($id){
-        DB::table('tintuc')->where('id',$id)->delete();
-        return redirect()->back()->with('success','Xóa thành công');
+        $tintuc= DB::table('tintuc')->where('id',$id)->get();
+        foreach($tintuc as $tt){
+            DB::table('tintuc')->where('id',$id)->delete();
+            unlink("./backend/uploadTinTuc/".$tt->hinhAnh);
+            return redirect()->back()->with('success','Xóa thành công');
+        }
+        
+        
+        
     }
 }

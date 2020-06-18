@@ -55,7 +55,7 @@
                     <td><textarea name="noiDung" id="editor1" cols="30" rows="10"></textarea></td>
                 </tr>
                 <tr>
-                    <td>Hình ảnh</td>
+                    <td><p>Hình ảnh hiển thị </p><span class="font-italic">(Ảnh ngang)</span></td>
                     <td><input type="file" class="bg-light form-control" style="width: 50%;" name="hinhAnh" accept="image/png, image/jpeg"></td>
                 </tr>
                 <tr>

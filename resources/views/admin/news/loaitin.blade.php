@@ -21,7 +21,7 @@
     @endif
     <div class="row">
         <div class="col-12" style="">
-            <table class="table table-striped table-bordered table-dark" >
+            <table class="table table-striped table-bordered table-dark text-center" >
                 <tr class="text-center">
                     <td colspan="4" class="font-weight-bold"><h3>DANH SÁCH LOẠI TIN</h3></td>
                 </tr>
@@ -29,7 +29,7 @@
                     <td>#</td>
                     <td>Thể loại</td>
                     <td>Tên loại tin</td>
-                    <td>Thao tác</td>
+                    <td style="width: 20%;">Thao tác</td>
                 </tr>
                 <?php
                     $i=1;

@@ -12,7 +12,7 @@
                     <div class="card bg-primary text-white mb-4 text-center">
                         <div class="card-body"><h1>{{ $demtheloai }}</h1><h2>THỂ LOẠI</h2></div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">Chi tiết</a>
+                            <a class="small text-white stretched-link" href="{{route('admin.get.theLoai')}}">Chi tiết</a>
                             <div class="small text-white"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                     <div class="card bg-warning text-white mb-4 text-center">
                         <div class="card-body"><h1>{{ $demloaitin }}</h1><h2>LOẠI TIN</h2></div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">Chi tiết</a>
+                            <a class="small text-white stretched-link" href="{{route('admin.get.loaiTin')}}">Chi tiết</a>
                             <div class="small text-white"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                     <div class="card bg-success text-white mb-4 text-center">
                         <div class="card-body"><h1>{{ $demtintuc }}</h1><h2>TIN TỨC</h2></div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">Chi tiết</a>
+                            <a class="small text-white stretched-link" href="{{route('admin.get.tinTuc')}}">Chi tiết</a>
                             <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                         </div>
                     </div>
